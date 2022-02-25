@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: auto-merge
-      if: github.event.review.state == 'approved'
       id: auto-merge
       run: gh pr merge --auto --rebase $PR_URL
       env:
